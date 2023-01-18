@@ -1,4 +1,4 @@
-require  './app/models/concerns/custom_attributes.rb'
+require  './app/concerns/custom_attributes.rb'
 
 class Customer < ApplicationRecord
     include Customizable
