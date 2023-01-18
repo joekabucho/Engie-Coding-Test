@@ -1,5 +1,5 @@
 require 'rails_helper'
-require  'C:/Projects/Engie-Coding-Test/app/models/concerns/custom_attributes.rb'
+require  './app/concerns/customizable.rb'
 
 RSpec.describe Customizable, type: :model do
   include Customizable

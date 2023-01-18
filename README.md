@@ -37,6 +37,5 @@ irb(main):003:0>Battery.get_custom_attribute("model")
 
 ```console
 PS C:\Projects\Engie-Coding-Test> rspec spec/migrations
-PS C:\Projects\Engie-Coding-Test> rspec spec/concerns
 ```
 

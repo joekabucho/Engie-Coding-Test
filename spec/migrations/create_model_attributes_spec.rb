@@ -1,8 +1,8 @@
 require 'rails_helper'
+require  './db/migrate/20230117095405_create_model_attributes.rb'
 
-require 'C:\Projects\Engie-Coding-Test\db\migrate\20230117095405_create_model_attributes.rb'
 
-RSpec.describe CreateModelAttributes, type: :migration do
+RSpec.describe ::CreateModelAttributes, type: :migration do
   it 'creates the model_attributes table' do
     expect { subject.change }.to change { ActiveRecord::Base.connection.table_exists?(:model_attributes) }.from(false).to(true)
   end

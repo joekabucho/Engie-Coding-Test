@@ -1,4 +1,5 @@
 require 'rails_helper'
+require  './app/models/battery.rb'
 
 RSpec.describe Battery, type: :model do
   describe "#create" do

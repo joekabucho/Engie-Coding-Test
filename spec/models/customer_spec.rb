@@ -1,4 +1,5 @@
 require 'rails_helper'
+require  './app/models/customer.rb'
 
 RSpec.describe Customer, type: :model do
   describe '#set_custom_attribute' do
@@ -17,7 +18,7 @@ RSpec.describe Customer, type: :model do
   describe '#get_custom_attribute' do
     it 'gets a custom attribute value for a customer' do
       customer = Customer.create(name: "John")
-      battery.set_custom_attribute("brand", "chloride exide")
+ battery.set_custom_attribute("brand", "chloride exide")
       expect(battery.get_custom_attribute("brand")).to eq "chloride exide"
     end
   end
