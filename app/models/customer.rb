@@ -1,4 +1,4 @@
-require  './app/concerns/custom_attributes.rb'
+require  './app/concerns/customizable.rb'
 
 class Customer < ApplicationRecord
     include Customizable
@@ -21,8 +21,5 @@ class Customer < ApplicationRecord
     end
       
 
-    # customer = Customer.new
-    # customer.set_custom_attribute("email", "example@email.com")
-    # customer.get_custom_attribute("email") # returns "example@email.com"
 
 end

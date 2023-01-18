@@ -1,4 +1,4 @@
-require  './app/models/concerns/custom_attributes.rb'
+require  './app/models/concerns/customizable.rb'
 
 class Battery < ApplicationRecord
     include Customizable
