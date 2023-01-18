@@ -1,13 +1,13 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  model_name: MyString
+  model_type: MyString
   model_id: 1
   attribute_name: MyString
   attribute_value: MyString
 
 two:
-  model_name: MyString
+  model_type: MyString
   model_id: 1
   attribute_name: MyString
   attribute_value: MyString

@@ -22,10 +22,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_17_123436) do
     t.integer "model_id"
     t.string "attribute_name"
     t.string "attribute_value"
-    t.integer "model_attribute_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["model_attribute_id"], name: "index_custom_attributes_on_model_attribute_id"
     t.index ["model_type", "model_id"], name: "index_custom_attributes_on_model_type_and_model_id", unique: true
   end
 
@@ -44,5 +42,4 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_17_123436) do
     t.index ["model_type", "attribute_name"], name: "index_model_attributes_on_model_type_and_attribute_name", unique: true
   end
 
-  add_foreign_key "custom_attributes", "model_attributes"
 end
