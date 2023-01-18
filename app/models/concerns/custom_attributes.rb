@@ -1,4 +1,4 @@
-module CustomAttributes
+module Customizable
     extend ActiveSupport::Concern
   
     included do
@@ -33,7 +33,7 @@ module CustomAttributes
     private
   
     def allowed_attribute?(name)
-      ModelAttribute.exists?(model_name: self.class.name, attribute_name: name)
+      ModelAttribute.exists?(model_type: self.class.name, attribute_name: name)
     end
-  end
+end
   
