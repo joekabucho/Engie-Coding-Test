@@ -7,13 +7,13 @@
 * model_id (integer)
 * attribute_name (string)
 * attribute_value (string)
-1. I  then created a Concern called "CustomAttributes" that can be included in any model. This concern would provide methods for the model to interact with the custom_attributes table. For example, the concern would provide methods to set and get custom attributes for a specific instance of the model.
-2. To handle the configuration of which attributes are allowed for each model, I would create a table called "model_attributes" with the following columns:
+2. I  then created a Concern called "CustomAttributes" that can be included in any model. This concern would provide methods for the model to interact with the custom_attributes table. For example, the concern would provide methods to set and get custom attributes for a specific instance of the model.
+3. To handle the configuration of which attributes are allowed for each model, I then created a table called "model_attributes" with the following columns:
 *  model_name (string)
 *  attribute_name (string)
-3. When a new attribute is added for a specific model, a new row is then inserted into the model_attributes table with the appropriate model_name and attribute_name. The concern  then check's this table before allowing an attribute to be set or retrieved for a specific model.
-4. For querying the custom attributes using pure SQL, I  created a view that joins the custom_attributes table with the model's table on the model_id and model_name columns. This view  allows for querying the custom attributes in the same way as querying the model's attributes.
-5. I then add validations to ensure that only allowed attributes are added and that the attribute value is a string.
+4. When a new attribute is added for a specific model, a new row is then inserted into the model_attributes table with the appropriate model_name and attribute_name. The concern  then check's this table before allowing an attribute to be set or retrieved for a specific model.
+5. For querying the custom attributes using pure SQL, I  created a view that joins the custom_attributes table with the model's table on the model_id and model_name columns. This view  allows for querying the custom attributes in the same way as querying the model's attributes.
+6. I then add validations to ensure that only allowed attributes are added and that the attribute value is a string.
 
 **TESTING THE MODELS**
 
